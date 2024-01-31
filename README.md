@@ -1,4 +1,4 @@
-﻿# COMP4476-Project
+﻿# COMP4431-Project
 ## Controls
 <ul>
   <li>Player 1 movement: arrow keys</li>
