@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Element
 {
+    /// <summary>
+    /// The types of elements
+    /// </summary>
     public enum Type
     {
         //Lightning,
