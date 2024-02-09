@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
             }
 
             anim.SetBool("isMoving",h!=0);
+          
             
             gameObject.transform.position = new Vector2 (transform.position.x + (h * speed), 
                 transform.position.y + (v * speed));
