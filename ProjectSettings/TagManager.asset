@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background0Layer
+    uniqueID: 3481354753
+    locked: 0
+  - name: Background1Layer
+    uniqueID: 1504332883
+    locked: 0
+  - name: Background2Layer
+    uniqueID: 1982914887
+    locked: 0
+  - name: Background3Layer
+    uniqueID: 464861741
+    locked: 0
+  - name: Background4Layer
+    uniqueID: 2160816349
+    locked: 0
+  - name: TreesRocksLayer
+    uniqueID: 2716973711
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
