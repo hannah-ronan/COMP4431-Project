@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5e8823f0796bcf741933608b0beb2b4f
+guid: 987407a5e3e4193478fa64a394c6eef2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 192
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dog_walk 1_0
+      name: frog_idle_scaled_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,62 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3236a2c027de738459ccc465b3bcdf15
-      internalID: -2077286545
+      spriteID: 46b6ecf7a74c1ec4a9d405121421c0e5
+      internalID: 50694621
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_walk 1_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e90401046991026489b58e61cdb313bf
-      internalID: 891309556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dog_walk 1_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41d991c476547bc4c96c94d056bd3e28
-      internalID: 1694463674
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dog_walk 1_3
+      name: frog_idle_scaled_1
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 64
-        height: 64
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 004a07ff861f6ce4dbea1a8373787824
-      internalID: -2145570618
+      spriteID: 7d768e9f98ff18049be603bce56cf938
+      internalID: 2092683065
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_walk 1_4
+      name: frog_idle_scaled_2
       rect:
         serializedVersion: 2
-        x: 256
+        x: 384
         y: 0
-        width: 64
-        height: 64
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5ac7a09c270159459511b6019ab2857
-      internalID: -1368617702
+      spriteID: de59d6b50f5c5ad48abc18827e81634e
+      internalID: 1396213710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dog_walk 1_5
+      name: frog_idle_scaled_3
       rect:
         serializedVersion: 2
-        x: 320
+        x: 576
         y: 0
-        width: 64
-        height: 64
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +194,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c57d0ff20e65dfa46bb4f4f3b5ccc01c
-      internalID: -1582803143
+      spriteID: e97000afb28e065418d4eb73a0903768
+      internalID: -915966302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_idle_scaled_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a97c1f9bf2ce9f4c944d007bf43cf42
+      internalID: 314973581
       vertices: []
       indices: 
       edges: []
@@ -253,12 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dog_walk 1_3: -2145570618
-      dog_walk 1_2: 1694463674
-      dog_walk 1_5: -1582803143
-      dog_walk 1_0: -2077286545
-      dog_walk 1_1: 891309556
-      dog_walk 1_4: -1368617702
+      frog_idle_scaled_1: 2092683065
+      frog_idle_scaled_2: 1396213710
+      frog_idle_scaled_0: 50694621
+      frog_idle_scaled_3: -915966302
+      frog_idle_scaled_4: 314973581
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

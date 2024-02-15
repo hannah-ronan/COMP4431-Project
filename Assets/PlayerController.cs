@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+    public float walkSpeed = 0.015f;
+    public float jumpHeight = 3; 
     public int playerNum;
     public bool active;
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
     private Animator anim;
+    private Rigidbody2D rb;
+    public bool isGrounded = true;
+
 
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -21,8 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         if(active){
             float h = Input.GetAxisRaw($"P{playerNum}Horizontal");
-            float v = Input.GetAxisRaw($"P{playerNum}Vertical");
-
+            
             if(h < 0){
                 spriteRenderer.flipX = true;
             }
@@ -32,9 +36,27 @@ public class PlayerController : MonoBehaviour
 
             anim.SetBool("isMoving",h!=0);
           
+            if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded){
+                float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
+                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            }
             
-            gameObject.transform.position = new Vector2 (transform.position.x + (h * speed), 
-                transform.position.y + (v * speed));
+            gameObject.transform.position = new Vector2 (transform.position.x + (h * walkSpeed),transform.position.y);
         }
     }
+
+    void OnCollisionEnter2D(Collision2D other){
+        Debug.Log(other.gameObject.name);
+        if(other.gameObject.CompareTag("Ground")){
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other){
+        Debug.Log(other.gameObject.name);
+        if(other.gameObject.CompareTag("Ground")){
+            isGrounded = false;
+        }
+    }
+
 }
