@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
             
-            gameObject.transform.position = new Vector2 (transform.position.x + (h * walkSpeed),transform.position.y);
+            gameObject.transform.position = new Vector2 (transform.position.x + (h * Time.deltaTime * walkSpeed),transform.position.y);
         }
     }
 

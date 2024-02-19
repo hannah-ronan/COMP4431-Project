@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb54032fa0969fb449aac590f0cc0edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0.025
+  walkSpeed: 5
   jumpHeight: 2
   playerNum: 1
   active: 1
