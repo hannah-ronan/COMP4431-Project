@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Objects.token
 {
@@ -12,31 +9,30 @@ namespace Objects.token
     {
         public const int Score = 1;
 
-        private static readonly int CollectedTriggerID = Animator.StringToHash("collected");
+        private static readonly int CollectedTriggerID = Animator.StringToHash("collect");
 
         public Element.Type element;
         public bool collected = false;
 
         private SpriteRenderer SpriteRenderer { get; set; }
+        private Animator Animator { get; set; }
 
-        private IEnumerator Collect()
+        private void Collect()
         {
-            Destroy(GetComponent<BoxCollider2D>());
-            GetComponent<Animator>().SetTrigger(CollectedTriggerID);
-            yield return new WaitUntil(() => collected);
             Destroy(gameObject);
         }
 
         private void Awake()
         {
             SpriteRenderer = GetComponent<SpriteRenderer>();
-            SpriteRenderer.material.color = global::Element.GetColour(element);
+            Animator = GetComponent<Animator>();
+            SpriteRenderer.color = Element.GetColour(element);
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if(other.gameObject.CompareTag("Player"))
-                StartCoroutine(nameof(Collect));
+                Animator.SetTrigger(CollectedTriggerID);
         }
     }
 }
