@@ -3,32 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using Objects.key;
 using UnityEngine;
 
-public class GameState : MonoBehaviour
+public class GameState: MonoBehaviour
 {
     private PlayerController[] Players { get; set; }
     public bool IsComplete { get; private set; }
-
-    public GameState()
-    {
-        IsComplete = false;
-    }
+    private Key[] Keys { get; set; }
 
     private void Awake()
     {
+        IsComplete = false;
+        Keys = FindObjectsOfType<Key>();
         Players = FindObjectsOfType<PlayerController>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        IsComplete = Array.TrueForAll(Players, player => player.active);
-
+        StartCoroutine(nameof(GameOver));
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator GameOver()
     {
-
+        yield return new WaitUntil(() => Array.TrueForAll(Keys, key => key == null));
+        foreach(var player in Players)
+            player.enabled = false;
+        //todo: show game over screen, score & next level
     }
 }
