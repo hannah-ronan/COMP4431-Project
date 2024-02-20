@@ -132,15 +132,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4626499254925572583, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4626499254925572583, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.568
+      value: -9.08
       objectReference: {fileID: 0}
     - target: {fileID: 4626499254925572583, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.333
+      value: -7.19
       objectReference: {fileID: 0}
     - target: {fileID: 4626499254925572583, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -174,10 +174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4626499254925572586, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
-      propertyPath: active
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7623859157584384591, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
       propertyPath: m_Name
       value: Frog
@@ -193,7 +189,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5828540924254300242, guid: 4759e26003a95cc4087420a2165b51de, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5828540924254300242, guid: 4759e26003a95cc4087420a2165b51de, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9103,7 +9099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8530295446908865160, guid: 7716ce0ef7c744845bda97090f52ebd7, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8530295446908865160, guid: 7716ce0ef7c744845bda97090f52ebd7, type: 3}
       propertyPath: m_LocalPosition.x

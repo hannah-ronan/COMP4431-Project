@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isMoving",h!=0);
           
             if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded){
+                anim.SetTrigger("bigJump");
                 float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if(other.gameObject.CompareTag("Ground")){
             isGrounded = true;
+            anim.SetTrigger("isLanding");
         }
     }
 
@@ -56,6 +58,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(other.gameObject.name);
         if(other.gameObject.CompareTag("Ground")){
             isGrounded = false;
+            anim.ResetTrigger("isLanding");
         }
     }
 

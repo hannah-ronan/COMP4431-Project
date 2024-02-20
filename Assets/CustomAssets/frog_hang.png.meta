@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d97695dd9bf61543bb4a8c281c6ce56
+guid: 990ad089c8bfa754183cdb6c1ca423d7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frog_jump_scaled_0
+      name: frog_hang_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10aacd7eed6a0d947b51903a246587e7
-      internalID: 916984386
+      spriteID: 32de7a954572db141a7ee3bf9f760491
+      internalID: -740904409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog_jump_scaled_1
+      name: frog_hang_1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 64
         y: 0
-        width: 192
-        height: 192
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,113 +152,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e9f13cb40b970e43b45d0b71bda0680
-      internalID: 948546079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_scaled_2
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 99d2c35816e43894ab8666ef2710ccc4
-      internalID: 814654692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_scaled_3
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d0077622c43dc24da53c9343408e294
-      internalID: -2015145374
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_scaled_4
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 867e7c2a11a495447a5c34e3fd3b55fa
-      internalID: 41891813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_scaled_5
-      rect:
-        serializedVersion: 2
-        x: 960
-        y: 0
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a3cda51dd05cd9741abb49ce02eec38f
-      internalID: 1324620682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_scaled_6
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f0b795b6a6f11f42a3d56913ca70911
-      internalID: 93771766
+      spriteID: 1634fc5af71188b4ea9172a69e6609ac
+      internalID: -490604131
       vertices: []
       indices: 
       edges: []
@@ -274,13 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      frog_jump_scaled_0: 916984386
-      frog_jump_scaled_1: 948546079
-      frog_jump_scaled_5: 1324620682
-      frog_jump_scaled_6: 93771766
-      frog_jump_scaled_2: 814654692
-      frog_jump_scaled_4: 41891813
-      frog_jump_scaled_3: -2015145374
+      frog_hang_1: -490604131
+      frog_hang_0: -740904409
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
