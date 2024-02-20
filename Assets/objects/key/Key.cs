@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 namespace Objects.key
@@ -16,14 +15,11 @@ namespace Objects.key
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if(collision.gameObject.CompareTag("Player"))
-                StartCoroutine(nameof(Collect));
+                GetComponent<Animator>().SetTrigger(CollectedTriggerID); //<-- Trigger animation>
         }
 
-        private IEnumerator Collect()
+        private void Collect()
         {
-            Destroy(GetComponent<BoxCollider2D>());
-            GetComponent<Animator>().SetTrigger(CollectedTriggerID); //<-- Trigger animation>
-            yield return new WaitUntil(() => collected);
             Destroy(gameObject);
         }
     }

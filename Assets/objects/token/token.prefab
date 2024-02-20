@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6563276216270014512}
   - component: {fileID: 6977165377173768452}
   m_Layer: 0
-  m_Name: token
+  m_Name: Token
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: c992073088ce19347a1b07e9a4cbd3d4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -145,4 +145,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08780c242cac459429548fb68f879637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Element: 0
+  element: 0
+  collected: 0
