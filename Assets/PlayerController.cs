@@ -44,6 +44,9 @@ public class PlayerController : MonoBehaviour
             
             gameObject.transform.position = new Vector2 (transform.position.x + (h * Time.deltaTime * walkSpeed),transform.position.y);
         }
+        else{
+            anim.SetBool("isMoving", false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other){

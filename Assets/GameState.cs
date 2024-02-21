@@ -24,7 +24,7 @@ public class GameState: MonoBehaviour
     {
         yield return new WaitUntil(() => Array.TrueForAll(Keys, key => key == null));
         foreach(var player in Players)
-            player.enabled = false;
+            player.active = false;
         //todo: show game over screen, score & next level
     }
 }
