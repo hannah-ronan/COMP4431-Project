@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Objects.key
@@ -6,21 +7,46 @@ namespace Objects.key
     {
         private static readonly int CollectedTriggerID = Animator.StringToHash("collected");
 
-        /// <summary>
-        /// This is a flag to indicate if the key has been collected or not.
-        /// Specifically, it is a signal when the animation of the key being collected is finished.
-        /// </summary>
-        public bool collected = false;
+        public Elements element = Elements.None;
+        private SpriteRenderer SpriteRenderer { get; set; }
+        private Animator Animator { get; set; }
+        public bool Collected { get; private set; }
+
+        public void Awake()
+        {
+            SpriteRenderer = GetComponent<SpriteRenderer>();
+            Animator = GetComponent<Animator>();
+            if(element != Elements.None)
+                SpriteRenderer.color = Element.GetColour(element);
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if(collision.gameObject.CompareTag("Player"))
-                GetComponent<Animator>().SetTrigger(CollectedTriggerID); //<-- Trigger animation>
+            var obj = collision.gameObject;
+            if(obj.CompareTag("Player"))
+            {
+                var player = obj.GetComponent<PlayerController>();
+                if(element == Elements.None || player.Element == element)
+                    Collect();
+                else
+                    StartCoroutine(Deny());
+            }
         }
 
         private void Collect()
         {
-            Destroy(gameObject);
+            Collected = true;
+            GetComponent<Animator>().SetTrigger(CollectedTriggerID); //<-- Trigger animation>
+        }
+
+        private void Remove() => Destroy(gameObject);
+
+        private IEnumerator Deny()
+        {
+            var original = SpriteRenderer.color;
+            SpriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.5f);
+            SpriteRenderer.color = original;
         }
     }
 }

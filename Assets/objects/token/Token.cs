@@ -5,7 +5,7 @@ namespace Objects.token
     /// <summary>
     /// Game Token
     /// </summary>
-    public class Token: MonoBehaviour
+    public class Token : MonoBehaviour
     {
         public const int Score = 1;
 
@@ -17,10 +17,7 @@ namespace Objects.token
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
 
-        private void Collect()
-        {
-            Destroy(gameObject);
-        }
+        private void Collect() => Destroy(gameObject);
 
         private void Awake()
         {

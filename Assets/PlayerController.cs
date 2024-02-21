@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -12,6 +10,11 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     public bool isGrounded = true;
+
+    //? prevent exterior modification to the element - https://docs.unity3d.com/Manual/script-Serialization.html
+    [SerializeField]
+    private Elements element = global::Elements.None;
+    public Elements Element => element;
 
 
     void Start()

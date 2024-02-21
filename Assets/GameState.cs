@@ -1,8 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
 using Objects.key;
 using UnityEngine;
 
@@ -22,9 +19,10 @@ public class GameState: MonoBehaviour
 
     private IEnumerator GameOver()
     {
-        yield return new WaitUntil(() => Array.TrueForAll(Keys, key => key == null));
+        yield return new WaitUntil(() => Array.TrueForAll(Keys, key => key == null || key.Collected));
         foreach(var player in Players)
             player.active = false;
+        IsComplete = true;
         //todo: show game over screen, score & next level
     }
 }
