@@ -11,7 +11,7 @@ namespace Objects.token
 
         private static readonly int CollectedTriggerID = Animator.StringToHash("collect");
 
-        public Element.Type element;
+        public Elements element;
         public bool collected = false;
 
         private SpriteRenderer SpriteRenderer { get; set; }

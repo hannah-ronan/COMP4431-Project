@@ -141,6 +141,7 @@ MonoBehaviour:
   playerNum: 2
   active: 1
   isGrounded: 1
+  element: 4
 --- !u!50 &8618762516996172417
 Rigidbody2D:
   serializedVersion: 4
