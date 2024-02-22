@@ -17,15 +17,27 @@ public class LevelController : MonoBehaviour
     {
         if (Input.GetButtonDown("P1SwitchCharacter"))
         {
-            Players.Where(player=>player.playerNum==1).ToList().ForEach(player=>{
-                player.active = !player.active;
-            });
+            var characters = Players.Where(player=>player.playerNum==1).ToList();
+            for (int i = 0;i<characters.Count();i++){
+                if(characters[i].active){
+                    characters[i].active = false;
+                    var activateIndex = i == characters.Count()-1 ? 0 : i + 1;
+                    characters[activateIndex].active=true;
+                    break;
+                }
+            }
         }
         if (Input.GetButtonDown("P2SwitchCharacter"))
         {
-            Players.Where(player=>player.playerNum==2).ToList().ForEach(player=>{
-                player.active = !player.active;
-            });
+            var characters = Players.Where(player=>player.playerNum==2).ToList();
+            for (int i = 0;i<characters.Count();i++){
+                if(characters[i].active){
+                    characters[i].active = false;
+                    var activateIndex = i == characters.Count()-1 ? 0 : i + 1;
+                    characters[activateIndex].active=true;
+                    break;
+                }
+            }
         }
     }
 }

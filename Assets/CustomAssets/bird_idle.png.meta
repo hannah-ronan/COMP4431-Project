@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f5379a028d022748b7de2f8792cae2b
+guid: 664119153e16ec544a3f65fffa273950
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frog_jump_0
+      name: bird_idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a235ae06c1b3684dacd263ba9e0d7f0
-      internalID: 736857914
+      spriteID: 4f5f04e14042e704f9b9d97f340e1a89
+      internalID: -663945040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog_jump_1
+      name: bird_idle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86324f982aa251c47bd6fa5b3f2f6aca
-      internalID: -828315102
+      spriteID: 359c74df559b680489c371edddef960d
+      internalID: 907023015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog_jump_2
+      name: bird_idle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b22fde04c5f49f4ead7f4c9a47597c5
-      internalID: 2145359257
+      spriteID: 98e3b451906209c49bdee10e0638f1d9
+      internalID: -1489073263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog_jump_3
+      name: bird_idle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7167a21ec5e19d34ebb4dbfdeeb568de
-      internalID: -628824481
+      spriteID: 990c29b852289dd40909aa3c95e4d0a6
+      internalID: 294889193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: frog_jump_4
+      name: bird_idle_4
       rect:
         serializedVersion: 2
         x: 256
@@ -215,71 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18fb5d6fa5d5a3f4dbf48efc70d266be
-      internalID: -851138215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd4de3e65b2c50647841778e095b65d5
-      internalID: -291483318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ffc8b9221720164da25abeeb76c0081
-      internalID: 146465048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frog_jump_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 046368f6c065d4f42ae14c5a780a6bee
-      internalID: 1892805089
+      spriteID: 604a86a6dca794247aa22131a667982e
+      internalID: -1013238550
       vertices: []
       indices: 
       edges: []
@@ -295,14 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      frog_jump_7: 1892805089
-      frog_jump_0: 736857914
-      frog_jump_5: -291483318
-      frog_jump_4: -851138215
-      frog_jump_1: -828315102
-      frog_jump_3: -628824481
-      frog_jump_6: 146465048
-      frog_jump_2: 2145359257
+      bird_idle_0: -663945040
+      bird_idle_3: 294889193
+      bird_idle_4: -1013238550
+      bird_idle_2: -1489073263
+      bird_idle_1: 907023015
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
