@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Objects.token
@@ -28,8 +30,13 @@ namespace Objects.token
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.gameObject.CompareTag("Player"))
-                Animator.SetTrigger(CollectedTriggerID);
+            var obj = other.gameObject;
+            if(obj.CompareTag("Player"))
+            {
+                var player = obj.GetComponent<PlayerController>();
+                if(element == Elements.None || player.Element == element)
+                    Collect();
+            }
         }
     }
 }
