@@ -169,7 +169,7 @@ InputManager:
     m_Name: P1Vertical
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: down
+    negativeButton: 
     positiveButton: up
     altNegativeButton: 
     altPositiveButton: 
@@ -201,7 +201,7 @@ InputManager:
     m_Name: P2Vertical
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: s
+    negativeButton: 
     positiveButton: w
     altNegativeButton: 
     altPositiveButton: 
