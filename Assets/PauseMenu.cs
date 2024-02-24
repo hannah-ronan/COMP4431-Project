@@ -40,8 +40,8 @@ public class PauseMenu : MonoBehaviour
     {
         GameIsPaused = false;
         Time.timeScale = 1;
-        SceneManager.LoadScene("Level1Scene");
-        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 
     public void Pause()

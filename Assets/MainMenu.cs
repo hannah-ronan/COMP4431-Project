@@ -19,12 +19,17 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level1Scene");
+        SceneManager.LoadScene("LevelSelectionScene");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void Back()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
 
