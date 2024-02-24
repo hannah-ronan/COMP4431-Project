@@ -7,8 +7,8 @@
 ## summary 
 
 A local multiplayer platformer browser puzzle game with elementally themed animal-like characters.
-In the game the player will have to collect X amount of _ (token/keys/etc.).
-The players will have to cooperate and complete puzzles and tasks to collect all of the _ (keys,tokens,etc.).
+In the game the player will have to collect X amount of keys to progress.
+The players will have to cooperate and complete puzzles and tasks to complete the level.
 
 ### Controls
 
