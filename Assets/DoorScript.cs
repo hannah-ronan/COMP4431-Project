@@ -25,10 +25,6 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (ButtonPress.isButtonPressed)
-        {
-            door.SetActive(false);
-        }*/
         if(script1.isPressed() && script2.isPressed() && script3.isPressed() && script4.isPressed())
         {
             door.SetActive(false);

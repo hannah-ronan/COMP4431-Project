@@ -22,6 +22,8 @@ public class GameState : MonoBehaviour
 	public int CollectedTokens => Tokens.Count(token => token == null || token.collected);
 	public int Score => Convert.ToInt32(Math.Round(Timer.ElpasedTime.TotalSeconds * (CollectedKeys + CollectedTokens)));
 
+	public GameObject NextSceneUI;
+
 	private void Awake()
 	{
 		IsComplete = false;
@@ -40,6 +42,7 @@ public class GameState : MonoBehaviour
 			player.active = false;
 		IsComplete = true;
 		//todo: show game over screen, score & next level
+		NextSceneUI.SetActive(true);
 	}
 
 	private void SaveScore() => PlayerPrefs.SetInt(Level, Score);
