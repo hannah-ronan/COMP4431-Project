@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private Rigidbody2D rb;
-    public bool isGrounded = true;
 
     //? prevent exterior modification to the element - https://docs.unity3d.com/Manual/script-Serialization.html
     [SerializeField]
@@ -39,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
             anim.SetBool("isMoving",h!=0);
           
-            if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded){
+            if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded()){
                 anim.SetTrigger("Jump");
                 float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -52,16 +51,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    bool isGrounded(){
+        var playerOrigin = new Vector2(rb.transform.position.x, rb.transform.position.y-1);
+        var hitLayers = LayerMask.GetMask("Objects") | LayerMask.GetMask("Default");
+        return Physics2D.Raycast(playerOrigin, Vector2.down, 0.65f, hitLayers);
+    }
+
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.CompareTag("Ground")){
-            isGrounded = true;
             anim.SetTrigger("Land");
         }
     }
 
     void OnCollisionExit2D(Collision2D other){
         if(other.gameObject.CompareTag("Ground")){
-            isGrounded = false;
             anim.ResetTrigger("Land");
         }
     }
