@@ -9,7 +9,7 @@ Animentals is a local multiplayer platformer browser puzzle game with elementall
 In the game the player will have to collect keys to progress.
 The players will have to cooperate and complete puzzles and tasks to complete the level.
 
-## System Requirements
+### System Requirements
 All you need to play our game is a web browser and internet connection - the game can be found here https://hannahronan.itch.io/animentals
 
 ### Controls
