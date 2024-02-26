@@ -9,6 +9,8 @@ using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour
 {
+	[SerializeField] private AudioSource collectSoundEffect;
+	[SerializeField] private AudioSource gameOverSoundEffect;
 	private Key[] Keys { get; set; }
 	private Token[] Tokens { get; set; }
 	private PlayerController[] Players { get; set; }
@@ -41,9 +43,21 @@ public class GameState : MonoBehaviour
 		foreach (var player in Players)
 			player.active = false;
 		IsComplete = true;
+		if (gameOverSoundEffect != null)
+		{
+			gameOverSoundEffect.Play();
+		}
 		//todo: show game over screen, score & next level
 		NextSceneUI.SetActive(true);
 	}
 
 	private void SaveScore() => PlayerPrefs.SetInt(Level, Score);
+
+	public void PlayCollectSound()
+	{
+		if (collectSoundEffect != null)
+		{
+			collectSoundEffect.Play();
+		}
+	}
 }

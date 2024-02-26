@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Elements element = global::Elements.None;
     public Elements Element => element;
+    [SerializeField] private AudioSource jumpSoundEffect;
 
 
     void Start()
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
           
             if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded()){
                 anim.SetTrigger("Jump");
+                jumpSoundEffect.Play();
                 float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
