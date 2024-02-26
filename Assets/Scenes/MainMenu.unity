@@ -1034,7 +1034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202, y: 324}
+  m_AnchoredPosition: {x: -202, y: 450}
   m_SizeDelta: {x: 1000, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &833319132
@@ -1057,24 +1057,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Purpose:
-
-
-    They are Four different characters. The characters will
-    have to cooperate and complete puzzles and tasks to complete the level. Thoughout
-    the levels there are coins which can be collected. The level is completed one
-    the key is collected.
-
-
-
-
-    Controls:
-
-
-    Movement: Arrow Keys
-
-    Switch
-    Character: Left Shift'
+  m_text: "Purpose:\n\nThere are four different characters. The characters will have
+    to co-operate to complete puzzles and tasks to beat the level. Thoughout the
+    levels there are coins which can be collected for bonus points. The level is
+    completed once all keys are collected.\n\nCharacters - Each character is an animal
+    with an element as a theme.\n\n\tEarth - Bird\n\tWater - Dog\n\tFire - Frog\n\tAir
+    - Turtle\n\nControls:\n\nMovement: Arrow Keys\nSwitch Character: Left Shift"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
