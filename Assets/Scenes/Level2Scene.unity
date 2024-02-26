@@ -4778,8 +4778,6 @@ GameObject:
   - component: {fileID: 1850922789}
   - component: {fileID: 1850922791}
   - component: {fileID: 1850922790}
-  - component: {fileID: 695042475}
-  - component: {fileID: 695042474}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Ground
@@ -10401,7 +10399,6 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008975461}
-  m_GameObject: {fileID: 695042473}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -10410,7 +10407,6 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -10528,7 +10524,6 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2138571661
---- !u!4 &695042475
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
