@@ -2997,6 +2997,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
+    - target: {fileID: 7137752174743878102, guid: d41367dccf571df40a46aa1c060dd376, type: 3}
+      propertyPath: jumpSoundEffect
+      value: 
+      objectReference: {fileID: 2089561527}
     - target: {fileID: 7137752174743878107, guid: d41367dccf571df40a46aa1c060dd376, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3652,6 +3656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog
       objectReference: {fileID: 0}
+    - target: {fileID: 8618762516996172416, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
+      propertyPath: jumpSoundEffect
+      value: 
+      objectReference: {fileID: 2089561527}
     - target: {fileID: 8618762516996172429, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3709,6 +3717,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb54032fa0969fb449aac590f0cc0edd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2089561527 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7449055447927975952, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
+  m_PrefabInstance: {fileID: 503434499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2103644094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3720,6 +3733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turtle
       objectReference: {fileID: 0}
+    - target: {fileID: 7785450221740521683, guid: 4093cdcd26807434dacff176c9ee71a6, type: 3}
+      propertyPath: jumpSoundEffect
+      value: 
+      objectReference: {fileID: 2089561527}
     - target: {fileID: 7785450221740521694, guid: 4093cdcd26807434dacff176c9ee71a6, type: 3}
       propertyPath: m_RootOrder
       value: 1
