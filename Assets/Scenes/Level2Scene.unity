@@ -402,6 +402,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5085522333377519123, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.38431373
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085522333377519123, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.84313726
+      objectReference: {fileID: 0}
+    - target: {fileID: 5085522333377519123, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9529412
+      objectReference: {fileID: 0}
     - target: {fileID: 7623859157584384591, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
       propertyPath: m_Name
       value: Frog

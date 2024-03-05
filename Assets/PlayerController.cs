@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private Rigidbody2D rb;
-
+    public SpriteRenderer arrowSprite;
     public Vector2 groundCheckBoxSize;
     public float groundCheckCastDistance;
 
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(active){
+            arrowSprite.enabled = true;
             float h = Input.GetAxisRaw($"P{playerNum}Horizontal");
             
             if(h < 0){
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
             gameObject.transform.position = new Vector2 (transform.position.x + (h * Time.deltaTime * walkSpeed),transform.position.y);
         }
         else{
+            arrowSprite.enabled = false;
             anim.SetBool("isMoving", false);
         }
     }
