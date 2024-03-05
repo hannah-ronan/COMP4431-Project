@@ -6,6 +6,8 @@ public class ButtonPress : MonoBehaviour
 
 {
     public bool isButtonPressed = false;
+    public int count = 0;
+
     public Sprite UnpressedSprite;
     public Sprite PressedSprite;
     public SpriteRenderer spriteRenderer;
@@ -14,15 +16,18 @@ public class ButtonPress : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isButtonPressed = true;
-        Debug.Log("Button is pressed ");
+        count += 1;
         spriteRenderer.sprite = PressedSprite;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isButtonPressed = false;
-        Debug.Log("Leaving button");
-        spriteRenderer.sprite = UnpressedSprite;
+        count -= 1;
+        if (count == 0)
+        {
+            isButtonPressed = false;
+            spriteRenderer.sprite = UnpressedSprite;
+        }
     }
 
     public bool isPressed()
