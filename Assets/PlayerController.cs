@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     }
 
     bool isGrounded(){
-        var hitLayers = LayerMask.GetMask("Objects") | LayerMask.GetMask("Default");
+        var hitLayers = LayerMask.GetMask("JumpableObjects") | LayerMask.GetMask("Ground");
         return Physics2D.BoxCast(transform.position, groundCheckBoxSize ,0, -transform.up, groundCheckCastDistance, hitLayers);
     }
 

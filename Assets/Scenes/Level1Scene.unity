@@ -1019,7 +1019,7 @@ GameObject:
   - component: {fileID: 369184021}
   - component: {fileID: 369184020}
   - component: {fileID: 369184023}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Square
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1347,7 +1347,7 @@ GameObject:
   - component: {fileID: 598224127}
   - component: {fileID: 598224130}
   - component: {fileID: 598224129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain
   m_TagString: Ground
   m_Icon: {fileID: 0}

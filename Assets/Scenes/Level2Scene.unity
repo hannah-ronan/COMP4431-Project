@@ -799,6 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonPressed: 0
+  count: 0
   UnpressedSprite: {fileID: -344388654, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   PressedSprite: {fileID: -519118755, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   spriteRenderer: {fileID: 288056635}
@@ -1000,6 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonPressed: 0
+  count: 0
   UnpressedSprite: {fileID: -344388654, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   PressedSprite: {fileID: -519118755, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   spriteRenderer: {fileID: 543871595}
@@ -2468,6 +2470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonPressed: 0
+  count: 0
   UnpressedSprite: {fileID: -344388654, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   PressedSprite: {fileID: -519118755, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   spriteRenderer: {fileID: 740703701}
@@ -5745,7 +5748,7 @@ GameObject:
   - component: {fileID: 1850922789}
   - component: {fileID: 1850922791}
   - component: {fileID: 1850922790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Terrain
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -11218,7 +11221,7 @@ GameObject:
   - component: {fileID: 2138571660}
   - component: {fileID: 2138571659}
   - component: {fileID: 2138571658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
