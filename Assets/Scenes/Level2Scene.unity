@@ -799,6 +799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonPressed: 0
+  count: 0
   UnpressedSprite: {fileID: -344388654, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   PressedSprite: {fileID: -519118755, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   spriteRenderer: {fileID: 288056635}
@@ -1000,6 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonPressed: 0
+  count: 0
   UnpressedSprite: {fileID: -344388654, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   PressedSprite: {fileID: -519118755, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   spriteRenderer: {fileID: 543871595}
@@ -2468,6 +2470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isButtonPressed: 0
+  count: 0
   UnpressedSprite: {fileID: -344388654, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   PressedSprite: {fileID: -519118755, guid: 72aa1870e551467499df9e5b4e61945d, type: 3}
   spriteRenderer: {fileID: 740703701}
