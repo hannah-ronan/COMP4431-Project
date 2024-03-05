@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
 
+    public Vector2 groundCheckBoxSize;
+    public float groundCheckCastDistance;
+
     //? prevent exterior modification to the element - https://docs.unity3d.com/Manual/script-Serialization.html
     [SerializeField]
     private Elements element = global::Elements.None;
@@ -54,9 +57,12 @@ public class PlayerController : MonoBehaviour
     }
 
     bool isGrounded(){
-        var playerOrigin = new Vector2(rb.transform.position.x, rb.transform.position.y-1);
         var hitLayers = LayerMask.GetMask("Objects") | LayerMask.GetMask("Default");
-        return Physics2D.Raycast(playerOrigin, Vector2.down, 0.65f, hitLayers);
+        return Physics2D.BoxCast(transform.position, groundCheckBoxSize ,0, -transform.up, groundCheckCastDistance, hitLayers);
+    }
+
+    private void OnDrawGizmos(){
+        Gizmos.DrawWireCube(transform.position - transform.up * groundCheckCastDistance, groundCheckBoxSize);
     }
 
     void OnCollisionEnter2D(Collision2D other){

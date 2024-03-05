@@ -141,6 +141,8 @@ MonoBehaviour:
   jumpHeight: 2
   playerNum: 1
   active: 0
+  groundCheckBoxSize: {x: 1, y: 0.25}
+  groundCheckCastDistance: 1.6
   element: 3
   jumpSoundEffect: {fileID: 7449055447927975952}
 --- !u!50 &4626499254925572587

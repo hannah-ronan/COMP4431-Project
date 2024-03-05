@@ -140,8 +140,10 @@ MonoBehaviour:
   jumpHeight: 2
   playerNum: 1
   active: 1
-  isGrounded: 1
+  groundCheckBoxSize: {x: 1, y: 0.25}
+  groundCheckCastDistance: 1.6
   element: 2
+  jumpSoundEffect: {fileID: 0}
 --- !u!50 &7137752174743878103
 Rigidbody2D:
   serializedVersion: 4
