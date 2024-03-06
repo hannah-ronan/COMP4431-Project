@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class ObstacleHit : MonoBehaviour
 {
-    public bool isObstacleHit = false;
+    public static bool isObstacleHit = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isObstacleHit = true;
-    }
-
-    public bool ObstacleCollide()
-    {
-        return isObstacleHit;
     }
 }
