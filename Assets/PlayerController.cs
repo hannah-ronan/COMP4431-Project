@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+       
     }
 
     // Update is called once per frame
@@ -60,6 +61,9 @@ public class PlayerController : MonoBehaviour
 
     bool isGrounded(){
         var hitLayers = LayerMask.GetMask("JumpableObjects") | LayerMask.GetMask("Ground");
+         if(Element == Elements.Air){
+            hitLayers = hitLayers | LayerMask.GetMask("CloudPlatforms");
+        }
         return Physics2D.BoxCast(transform.position, groundCheckBoxSize ,0, -transform.up, groundCheckCastDistance, hitLayers);
     }
 
@@ -70,6 +74,9 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.CompareTag("Ground")){
             anim.SetTrigger("Land");
+        }
+        if(Element != Elements.Air && other.gameObject.layer == 9){
+            Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
         }
     }
 
