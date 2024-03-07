@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     GameObject howToPlay;
     GameObject options;
 
+    public Animator crossFade;
+
     public void Start()
     {
         howToPlay = GameObject.Find("HowToPlayCanvas");
@@ -19,6 +21,8 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
+        //crossFade.SetTrigger("Start");
+       // yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("LevelSelectionScene");
     }
 
