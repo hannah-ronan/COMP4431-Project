@@ -95,10 +95,10 @@ GameObject:
   - component: {fileID: 8618762516996172429}
   - component: {fileID: 8618762516996172428}
   - component: {fileID: 8618762516996172431}
-  - component: {fileID: 8618762516996172430}
   - component: {fileID: 8618762516996172416}
   - component: {fileID: 8618762516996172417}
   - component: {fileID: 9203537353247268957}
+  - component: {fileID: 9127225244481832007}
   m_Layer: 3
   m_Name: Dog
   m_TagString: Player
@@ -194,22 +194,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!70 &8618762516996172430
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6801066376600322341}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.008852342, y: -1.1811732}
-  m_Size: {x: 1.9290404, y: 1.637967}
-  m_Direction: 1
 --- !u!114 &8618762516996172416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,3 +332,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!70 &9127225244481832007
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6801066376600322341}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03452364, y: -1.4382752}
+  m_Size: {x: 1.6833653, y: 1.1123366}
+  m_Direction: 1
