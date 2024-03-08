@@ -8,9 +8,16 @@ public class ObstacleHit : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(gameObject.CompareTag("Fire") && collision.gameObject.GetComponent<PlayerController>().Element==Elements.Fire){
+        var player = collision.gameObject.GetComponent<PlayerController>();
+        if(gameObject.CompareTag("Fire") && player.Element==Elements.Fire){
             return;
         }
+        player.Die();
+        StartCoroutine(DelayGameOver(1f));
+    }
+
+    IEnumerator DelayGameOver(float delayTime){
+        yield return new WaitForSeconds(delayTime);
         isObstacleHit = true;
     }
 }

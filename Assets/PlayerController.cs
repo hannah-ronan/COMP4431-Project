@@ -59,6 +59,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void Die(){
+        active = false;
+        anim.Play("die");
+    }
+
     bool isGrounded(){
         var hitLayers = LayerMask.GetMask("JumpableObjects") | LayerMask.GetMask("Ground");
          if(Element == Elements.Air){
