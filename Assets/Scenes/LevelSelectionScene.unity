@@ -943,7 +943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806fe0b9bf97bb040a559b9e11920ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crossFade: {fileID: 0}
+  crossFade: {fileID: 1149009233}
 --- !u!114 &1028904906
 MonoBehaviour:
   m_ObjectHideFlags: 0

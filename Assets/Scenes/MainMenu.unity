@@ -698,6 +698,8 @@ GameObject:
   - component: {fileID: 437317642}
   - component: {fileID: 437317641}
   - component: {fileID: 437317640}
+  - component: {fileID: 437317646}
+  - component: {fileID: 437317645}
   m_Layer: 5
   m_Name: HowToPlayCanvas
   m_TagString: Untagged
@@ -717,7 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806fe0b9bf97bb040a559b9e11920ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crossFade: {fileID: 0}
+  crossFade: {fileID: 390694729}
 --- !u!114 &437317641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +804,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!225 &437317645
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437317639}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!95 &437317646
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437317639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aba5b355060b4ed47a3b79e806802706, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &503434499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2156,6 +2190,8 @@ GameObject:
   - component: {fileID: 1189995953}
   - component: {fileID: 1189995957}
   - component: {fileID: 1189995958}
+  - component: {fileID: 1189995960}
+  - component: {fileID: 1189995959}
   m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
@@ -2280,6 +2316,38 @@ MonoBehaviour:
   - {fileID: 804725433}
   - {fileID: 2089561526}
   - {fileID: 990078153}
+--- !u!95 &1189995959
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189995952}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aba5b355060b4ed47a3b79e806802706, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &1189995960
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189995952}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1214228463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,6 +3315,8 @@ GameObject:
   - component: {fileID: 1335709231}
   - component: {fileID: 1335709230}
   - component: {fileID: 1335709229}
+  - component: {fileID: 1335709235}
+  - component: {fileID: 1335709234}
   m_Layer: 5
   m_Name: OptionsCanvas
   m_TagString: Untagged
@@ -3266,7 +3336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 806fe0b9bf97bb040a559b9e11920ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crossFade: {fileID: 0}
+  crossFade: {fileID: 390694729}
 --- !u!114 &1335709230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,6 +3420,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1335709234
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335709228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aba5b355060b4ed47a3b79e806802706, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &1335709235
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335709228}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1728793906
 GameObject:
   m_ObjectHideFlags: 0
