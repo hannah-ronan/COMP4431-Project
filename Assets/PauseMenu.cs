@@ -54,7 +54,6 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
-        //StartCoroutine(SceneActive(pauseMenuUI, true)); 
         Time.timeScale = 0;
         GameIsPaused = true;
     }
@@ -72,12 +71,5 @@ public class PauseMenu : MonoBehaviour
         crossFade.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(scene);
-    }
-
-    IEnumerator SceneActive(GameObject UI, bool active)
-    {
-        crossFade.SetTrigger("Start");
-        yield return new WaitForSeconds(1f);
-        UI.SetActive(active);
     }
 }
