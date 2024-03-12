@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
+    public Animator crossFade;
+
     private void Start()
     {
         pauseMenuUI.SetActive(false);
@@ -45,13 +47,14 @@ public class PauseMenu : MonoBehaviour
     {
         GameIsPaused = false;
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(LoadNextScene(SceneManager.GetActiveScene().name));
 
     }
 
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
+        //StartCoroutine(SceneActive(pauseMenuUI, true)); 
         Time.timeScale = 0;
         GameIsPaused = true;
     }
@@ -60,7 +63,21 @@ public class PauseMenu : MonoBehaviour
     {
         GameIsPaused = false;
         Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadNextScene("MainMenu"));
        
+    }
+
+    IEnumerator LoadNextScene(string scene)
+    {
+        crossFade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(scene);
+    }
+
+    IEnumerator SceneActive(GameObject UI, bool active)
+    {
+        crossFade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        UI.SetActive(active);
     }
 }

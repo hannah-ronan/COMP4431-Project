@@ -15,15 +15,13 @@ public class MainMenu : MonoBehaviour
         howToPlay = GameObject.Find("HowToPlayCanvas");
         options = GameObject.Find("OptionsCanvas");
 
-        howToPlay.gameObject.SetActive(false);
-        options.gameObject.SetActive(false);
+       howToPlay.gameObject.SetActive(false);
+       options.gameObject.SetActive(false);
     }
 
     public void PlayGame()
     {
-        //crossFade.SetTrigger("Start");
-       // yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("LevelSelectionScene");
+        StartCoroutine(LoadNextScene("LevelSelectionScene"));
     }
 
     public void QuitGame()
@@ -33,7 +31,15 @@ public class MainMenu : MonoBehaviour
 
     public void Back()
     {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadNextScene("MainMenu"));
+    }
+
+    IEnumerator LoadNextScene(string scene)
+    {
+        crossFade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(scene);
+
     }
 }
 

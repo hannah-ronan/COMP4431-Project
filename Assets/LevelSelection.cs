@@ -6,27 +6,28 @@ using UnityEngine.SceneManagement;
 public class LevelSelection : MonoBehaviour
 {
     [SerializeField] private AudioSource buttonClickAudio;
+    public Animator crossFade;
     public void LevelOne()
     {
-        SceneManager.LoadScene("Level1Scene");
+        StartCoroutine(LoadNextScene("Level1Scene"));
         PlayButtonClickSound();
     }
 
     public void LevelTwo()
     {
-        SceneManager.LoadScene("Level2Scene");
+        StartCoroutine(LoadNextScene("Level2Scene"));
         PlayButtonClickSound();
     }
 
     public void LevelThree()
     {
-        SceneManager.LoadScene("Level3Scene");
+        StartCoroutine(LoadNextScene("Level3Scene"));
         PlayButtonClickSound();
     }
 
     public void LevelFour()
     {
-        SceneManager.LoadScene("Level4Scene");
+        StartCoroutine(LoadNextScene("Level4Scene"));
         PlayButtonClickSound();
     }
     private void PlayButtonClickSound()
@@ -35,5 +36,13 @@ public class LevelSelection : MonoBehaviour
         {
             buttonClickAudio.Play();
         }
+    }
+
+    IEnumerator LoadNextScene(string scene)
+    {
+        crossFade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(scene);
+
     }
 }

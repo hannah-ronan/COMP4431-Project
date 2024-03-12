@@ -7,6 +7,8 @@ public class NextScene : MonoBehaviour
 {
     public GameObject NextLevelUI;
 
+    public Animator crossFade;
+
     private void Start()
     {
         NextLevelUI.SetActive(false);
@@ -14,12 +16,25 @@ public class NextScene : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(LoadNextLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadNextScene("MainMenu"));
     }
     
+    IEnumerator LoadNextLevel(int level)
+    {
+        crossFade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(level);
+    }
+
+    IEnumerator LoadNextScene(string scene)
+    {
+        crossFade.SetTrigger("Start");
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(scene);
+    }
 }
