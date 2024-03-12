@@ -9727,6 +9727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3942820720271322785, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+      propertyPath: nextLevelButton
+      value: 
+      objectReference: {fileID: 1960648724}
     - target: {fileID: 3942820720449315038, guid: fa26417b795148d43803563e88b01c5f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9780,6 +9784,11 @@ PrefabInstance:
 --- !u!1 &1960648723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3942820720271322791, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+  m_PrefabInstance: {fileID: 1960648722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1960648724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3942820720479541778, guid: fa26417b795148d43803563e88b01c5f, type: 3}
   m_PrefabInstance: {fileID: 1960648722}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2091328852

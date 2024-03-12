@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    public GameObject NextLevelUI;
+    public GameObject NextLevelUI, nextLevelButton;
 
     public Animator crossFade;
 
     private void Start()
     {
         NextLevelUI.SetActive(false);
+        if((SceneManager.GetActiveScene().buildIndex + 1) >= 5)
+        {
+            nextLevelButton.SetActive(false);
+        }
     }
 
     public void NextLevel()
