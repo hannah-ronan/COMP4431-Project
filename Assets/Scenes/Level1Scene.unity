@@ -7668,7 +7668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectSoundEffect: {fileID: 820314282}
   gameOverSoundEffect: {fileID: 820314284}
-  NextSceneUI: {fileID: 0}
+  NextSceneUI: {fileID: 1960648723}
 --- !u!82 &820314284
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10338,7 +10338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectSoundEffect: {fileID: 2129598204}
   gameOverSoundEffect: {fileID: 2129598205}
-  NextSceneUI: {fileID: 0}
+  NextSceneUI: {fileID: 1960648723}
 --- !u!114 &1196804054074738899 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7785450221740521683, guid: 4093cdcd26807434dacff176c9ee71a6, type: 3}
@@ -10652,7 +10652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectSoundEffect: {fileID: 1196804054074738907}
   gameOverSoundEffect: {fileID: 1196804054074738906}
-  NextSceneUI: {fileID: 0}
+  NextSceneUI: {fileID: 1960648723}
 --- !u!1001 &3426026233622706743
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10892,7 +10892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectSoundEffect: {fileID: 6099567702837658635}
   gameOverSoundEffect: {fileID: 6099567702837658634}
-  NextSceneUI: {fileID: 0}
+  NextSceneUI: {fileID: 1960648723}
 --- !u!82 &6099567702837658634
 AudioSource:
   m_ObjectHideFlags: 0

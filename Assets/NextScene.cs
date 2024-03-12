@@ -12,8 +12,9 @@ public class NextScene : MonoBehaviour
     private void Start()
     {
         NextLevelUI.SetActive(false);
-        if((SceneManager.GetActiveScene().buildIndex + 1) >= 5)
+        if((SceneManager.GetActiveScene().buildIndex + 1) > 5)
         {
+            Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
             nextLevelButton.SetActive(false);
         }
     }
