@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOverUI;
+    public static bool isGameOver = false;
 
     public Animator crossFade;
 
@@ -21,6 +22,7 @@ public class GameOver : MonoBehaviour
         if (ObstacleHit.isObstacleHit)
         {
             Time.timeScale = 0;
+            isGameOver = true;
             gameOverUI.SetActive(true);
         }
     }
@@ -28,6 +30,7 @@ public class GameOver : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1;
+        isGameOver = false;
         StartCoroutine(LoadNextScene("MainMenu"));
         ObstacleHit.isObstacleHit = false;
     }
@@ -35,6 +38,7 @@ public class GameOver : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
+        isGameOver = false;
         StartCoroutine(LoadNextScene(SceneManager.GetActiveScene().name));
         gameOverUI.SetActive(false);
         ObstacleHit.isObstacleHit = false;

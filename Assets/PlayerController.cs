@@ -31,31 +31,39 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(active){
-            arrowSprite.enabled = true;
-            float h = Input.GetAxisRaw($"P{playerNum}Horizontal");
-            
-            if(h < 0){
-                spriteRenderer.flipX = true;
-            }
-            else if(h > 0){
-                spriteRenderer.flipX = false;
-            }
+        if (PauseMenu.GameIsPaused == false)
+        {
+            if (active)
+            {
+                arrowSprite.enabled = true;
+                float h = Input.GetAxisRaw($"P{playerNum}Horizontal");
 
-            anim.SetBool("isMoving",h!=0);
-          
-            if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded()){
-                anim.SetTrigger("Jump");
-                jumpSoundEffect.Play();
-                float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
-                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                if (h < 0)
+                {
+                    spriteRenderer.flipX = true;
+                }
+                else if (h > 0)
+                {
+                    spriteRenderer.flipX = false;
+                }
+
+                anim.SetBool("isMoving", h != 0);
+
+                if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded())
+                {
+                    anim.SetTrigger("Jump");
+                    jumpSoundEffect.Play();
+                    float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
+                    rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                }
+
+                gameObject.transform.position = new Vector2(transform.position.x + (h * Time.deltaTime * walkSpeed), transform.position.y);
             }
-            
-            gameObject.transform.position = new Vector2 (transform.position.x + (h * Time.deltaTime * walkSpeed),transform.position.y);
-        }
-        else{
-            arrowSprite.enabled = false;
-            anim.SetBool("isMoving", false);
+            else
+            {
+                arrowSprite.enabled = false;
+                anim.SetBool("isMoving", false);
+            }
         }
     }
 
