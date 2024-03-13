@@ -1554,6 +1554,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860532317}
   m_CullTransparentMesh: 1
+--- !u!1 &942626496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 909264541902445174, guid: 779b28180699b5440b05f80ff5371d9d, type: 3}
+  m_PrefabInstance: {fileID: 948617006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &942626498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942626496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfeb790cbe70b0042af36977da88cac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Players:
+  - {fileID: 854419880}
+  - {fileID: 804725433}
+  - {fileID: 2089561526}
+  - {fileID: 990078153}
 --- !u!1001 &948617006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2189,7 +2211,6 @@ GameObject:
   - component: {fileID: 1189995954}
   - component: {fileID: 1189995953}
   - component: {fileID: 1189995957}
-  - component: {fileID: 1189995958}
   - component: {fileID: 1189995960}
   - component: {fileID: 1189995959}
   m_Layer: 5
@@ -2299,23 +2320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crossFade: {fileID: 390694729}
---- !u!114 &1189995958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1189995952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfeb790cbe70b0042af36977da88cac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Players:
-  - {fileID: 854419880}
-  - {fileID: 804725433}
-  - {fileID: 2089561526}
-  - {fileID: 990078153}
 --- !u!95 &1189995959
 Animator:
   serializedVersion: 4
