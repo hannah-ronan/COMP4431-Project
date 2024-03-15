@@ -29,14 +29,8 @@ namespace Objects.key
                 if(element == Elements.None || player.Element == element)
                     Collect();
                 else
-                    //StartCoroutine(Deny());
-                    SpriteRenderer.color = Color.red;
+                    StartCoroutine(Deny());
             }
-        }
-
-        public void OnTriggerExit2D(Collider2D collision)
-        {
-            SpriteRenderer.color = Element.GetColour(element);
         }
 
         private void Collect()
@@ -47,12 +41,12 @@ namespace Objects.key
 
         private void Remove() => Destroy(gameObject);
 
-        // private IEnumerator Deny()
-        // {
-        //     var original = SpriteRenderer.color;
-        //     SpriteRenderer.color = Color.red;
-        //     yield return new WaitForSeconds(0.5f);
-        //     SpriteRenderer.color = original;
-        // }
+        private IEnumerator Deny()
+        {
+            var original = Element.GetColour(element);
+            SpriteRenderer.color = Color.red;
+            yield return new WaitForSeconds(0.5f);
+            SpriteRenderer.color = original;
+        }
     }
 }
