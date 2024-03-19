@@ -161,7 +161,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2136731967
-  m_SortingLayer: -7
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 397679956, guid: cd2f271a444dd114db1dbe18e7676402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -229,6 +229,7 @@ MonoBehaviour:
   arrowSprite: {fileID: 5085522333377519123}
   groundCheckBoxSize: {x: 1, y: 0.25}
   groundCheckCastDistance: 1.6
+  headCheckCastDistance: 0.45
   element: 3
   jumpSoundEffect: {fileID: 7449055447927975952}
 --- !u!50 &4626499254925572587

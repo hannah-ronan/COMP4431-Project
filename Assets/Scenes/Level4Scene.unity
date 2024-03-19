@@ -8458,10 +8458,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog
       objectReference: {fileID: 0}
-    - target: {fileID: 8618762516996172428, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 130486732, guid: fa967db3dfb2e204b8845007e3cd634c, type: 3}
     - target: {fileID: 8618762516996172429, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
       propertyPath: m_RootOrder
       value: 15

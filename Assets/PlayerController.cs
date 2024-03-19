@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public SpriteRenderer arrowSprite;
     public Vector2 groundCheckBoxSize;
     public float groundCheckCastDistance;
+    public float headCheckCastDistance;
 
     //? prevent exterior modification to the element - https://docs.unity3d.com/Manual/script-Serialization.html
     [SerializeField]
@@ -77,11 +78,12 @@ public class PlayerController : MonoBehaviour
          if(Element == Elements.Air){
             hitLayers = hitLayers | LayerMask.GetMask("CloudPlatforms");
         }
-        return Physics2D.BoxCast(transform.position, groundCheckBoxSize ,0, -transform.up, groundCheckCastDistance, hitLayers);
+        return Physics2D.BoxCast(transform.position, groundCheckBoxSize ,0, -transform.up, groundCheckCastDistance, hitLayers) && !Physics2D.BoxCast(transform.position, groundCheckBoxSize ,0, -transform.up, headCheckCastDistance, hitLayers);
     }
 
     private void OnDrawGizmos(){
         Gizmos.DrawWireCube(transform.position - transform.up * groundCheckCastDistance, groundCheckBoxSize);
+        Gizmos.DrawWireCube(transform.position - transform.up * headCheckCastDistance, groundCheckBoxSize);
     }
 
     void OnCollisionEnter2D(Collision2D other){
