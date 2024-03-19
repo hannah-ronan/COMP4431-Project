@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
                     anim.SetTrigger("Jump");
                     jumpSoundEffect.Play();
                     float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
+                    rb.velocity = new Vector2(rb.velocity.x,0);
                     rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
                 }
 

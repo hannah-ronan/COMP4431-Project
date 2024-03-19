@@ -5927,6 +5927,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7785450221740521695, guid: 4093cdcd26807434dacff176c9ee71a6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4093cdcd26807434dacff176c9ee71a6, type: 3}
 --- !u!1001 &800855352
@@ -6222,6 +6226,10 @@ PrefabInstance:
     - target: {fileID: 5401963044890661491, guid: d41367dccf571df40a46aa1c060dd376, type: 3}
       propertyPath: m_Name
       value: Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 7137752174743878106, guid: d41367dccf571df40a46aa1c060dd376, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7137752174743878107, guid: d41367dccf571df40a46aa1c060dd376, type: 3}
       propertyPath: m_RootOrder
@@ -6825,6 +6833,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4626499254925572582, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4626499254925572583, guid: 8e1bb3373952a4249a6754349cbf0d5f, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -7765,6 +7777,10 @@ PrefabInstance:
     - target: {fileID: 6801066376600322341, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
       propertyPath: m_Name
       value: Dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 8618762516996172428, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8618762516996172429, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
       propertyPath: m_RootOrder

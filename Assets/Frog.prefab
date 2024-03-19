@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2134709044, guid: 0ae18fc6d603fe2459f677d31caf2010, type: 3}
-  m_Color: {r: 1, g: 0.86428106, b: 0.2971698, a: 1}
+  m_Color: {r: 0.9529412, g: 0.84313726, b: 0.38431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -160,8 +160,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2136731967
-  m_SortingLayer: 0
+  m_SortingLayerID: 372911227
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 397679956, guid: cd2f271a444dd114db1dbe18e7676402, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -227,8 +227,8 @@ MonoBehaviour:
   playerNum: 1
   active: 0
   arrowSprite: {fileID: 5085522333377519123}
-  groundCheckBoxSize: {x: 1, y: 0.25}
-  groundCheckCastDistance: 1.6
+  groundCheckBoxSize: {x: 0.75, y: 0.12}
+  groundCheckCastDistance: 1.5
   headCheckCastDistance: 0.45
   element: 3
   jumpSoundEffect: {fileID: 7449055447927975952}
