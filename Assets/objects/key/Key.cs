@@ -1,19 +1,23 @@
 using System.Collections;
+using UI.Score;
 using UnityEngine;
 
 namespace Objects.key
 {
     public class Key: MonoBehaviour
     {
+        public const int value = 1;
         private static readonly int CollectedTriggerID = Animator.StringToHash("collected");
 
         public Elements element = Elements.None;
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
         public bool Collected { get; private set; }
+        private Score Score { get; set; }
 
         public void Awake()
         {
+            Score = GameObject.FindObjectOfType<Score>();
             SpriteRenderer = GetComponent<SpriteRenderer>();
             Animator = GetComponent<Animator>();
             if(element != Elements.None)
@@ -36,6 +40,7 @@ namespace Objects.key
         private void Collect()
         {
             Collected = true;
+            Score.Keys++;
             GetComponent<Animator>().SetTrigger(CollectedTriggerID); //<-- Trigger animation>
         }
 

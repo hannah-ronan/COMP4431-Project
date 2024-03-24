@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UI.Score;
 using UnityEngine;
 
 namespace Objects.token
@@ -9,7 +10,7 @@ namespace Objects.token
     /// </summary>
     public class Token : MonoBehaviour
     {
-        public const int Score = 1;
+        public const int value = 5;
 
         private static readonly int CollectedTriggerID = Animator.StringToHash("collect");
 
@@ -18,11 +19,17 @@ namespace Objects.token
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
+        private Score Score { get; set; }
 
-        private void Collect() => Destroy(gameObject);
+        private void Collect()
+        {
+            Score.Tokens++;
+            Destroy(gameObject);
+        }
 
         private void Awake()
         {
+            Score = GameObject.FindObjectOfType<Score>();
             SpriteRenderer = GetComponent<SpriteRenderer>();
             Animator = GetComponent<Animator>();
             SpriteRenderer.color = Element.GetColour(element);
