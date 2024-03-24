@@ -23,3 +23,10 @@ All you need to play our game is a web browser and internet connection - the gam
 
 - [final report google doc](https://docs.google.com/document/d/18fczOi32C0eiQCZjbw5nLrBtizW49w1Py0UXJUW6lBw/edit?usp=sharing)
 - [group meeting notes](https://docs.google.com/document/d/18fczOi32C0eiQCZjbw5nLrBtizW49w1Py0UXJUW6lBw/edit?usp=sharing)
+
+## Credits
+
+Sound Effects from
+
+- [Pixaby](https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6346")
+    - UNIVERSFIELD

@@ -10,9 +10,10 @@ namespace Objects.key
         private static readonly int CollectedTriggerID = Animator.StringToHash("collected");
 
         public Elements element = Elements.None;
+        public AudioClip collectedSound;
+
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
-        public bool Collected { get; private set; }
         private Score Score { get; set; }
 
         public void Awake()
@@ -39,9 +40,11 @@ namespace Objects.key
 
         private void Collect()
         {
-            Collected = true;
+            Destroy(GetComponent<BoxCollider2D>());
+            if(collectedSound != null)
+                AudioSource.PlayClipAtPoint(collectedSound, transform.position,PlayerPrefs.GetFloat("SFXVolume", 3f));
             Score.Keys++;
-            GetComponent<Animator>().SetTrigger(CollectedTriggerID); //<-- Trigger animation>
+            Animator.SetTrigger(CollectedTriggerID); //<-- Trigger animation>
         }
 
         private void Remove() => Destroy(gameObject);
@@ -49,7 +52,7 @@ namespace Objects.key
         private IEnumerator Deny()
         {
             var original = Element.GetColour(element);
-            SpriteRenderer.color = Color.red;
+            SpriteRenderer.color = Color.black;
             yield return new WaitForSeconds(0.5f);
             SpriteRenderer.color = original;
         }

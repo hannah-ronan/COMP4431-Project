@@ -11,11 +11,10 @@ using UnityEngine.SceneManagement;
 
 public class GameState: MonoBehaviour
 {
-    [SerializeField] private AudioSource collectSoundEffect;
     [SerializeField] private AudioSource gameOverSoundEffect;
 
-    private Key[] Keys { get; set; }
-    private Token[] Tokens { get; set; }
+    private Score Score { get; set; }
+    private int InitialKeys { get; set; }
     private PlayerController[] Players { get; set; }
     private Timer Timer { get; set; }
 
@@ -28,8 +27,8 @@ public class GameState: MonoBehaviour
     private void Awake()
     {
         IsComplete = false;
-        Keys = FindObjectsOfType<Key>();
-        Tokens = FindObjectsOfType<Token>();
+        Score = FindObjectOfType<Score>();
+        InitialKeys = FindObjectsOfType<Key>().Length;
         Players = FindObjectsOfType<PlayerController>();
         Timer = GetComponent<Timer>();
         Level = SceneManager.GetActiveScene().name;
@@ -38,7 +37,7 @@ public class GameState: MonoBehaviour
 
     private IEnumerator GameOver()
     {
-        yield return new WaitUntil(() => Array.TrueForAll(Keys, key => key == null || key.Collected));
+        yield return new WaitUntil(() => Score.Keys == InitialKeys);
         foreach(var player in Players)
             player.active = false;
         IsComplete = true;
@@ -47,11 +46,5 @@ public class GameState: MonoBehaviour
         FindObjectOfType<Score>(true).Display();
         NextSceneUI.SetActive(true);
         yield return null;
-    }
-
-    public void PlayCollectSound()
-    {
-        if(collectSoundEffect != null)
-            collectSoundEffect.Play();
     }
 }

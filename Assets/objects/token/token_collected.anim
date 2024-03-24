@@ -320,7 +320,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.6666667
-    functionName: Collect
+    functionName: Remove
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

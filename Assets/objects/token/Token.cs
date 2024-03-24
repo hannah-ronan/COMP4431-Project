@@ -14,8 +14,8 @@ namespace Objects.token
 
         private static readonly int CollectedTriggerID = Animator.StringToHash("collect");
 
-        public Elements element;
-        public bool collected = false;
+        public Elements element = Elements.None;
+        public AudioClip collectedSound;
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
@@ -23,8 +23,11 @@ namespace Objects.token
 
         private void Collect()
         {
+            Destroy(GetComponent<BoxCollider2D>());
             Score.Tokens++;
-            Destroy(gameObject);
+            if(collectedSound != null)
+                AudioSource.PlayClipAtPoint(collectedSound, transform.position, PlayerPrefs.GetFloat("SFXVolume", 3f));
+            Animator.SetTrigger(CollectedTriggerID);
         }
 
         private void Awake()
@@ -45,5 +48,7 @@ namespace Objects.token
                     Collect();
             }
         }
+
+        private void Remove() => Destroy(gameObject);
     }
 }
