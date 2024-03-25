@@ -13,12 +13,21 @@ public class PlayerModeToggle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var PlayerModePref = PlayerPrefs.GetInt("TwoPlayerModeOn", -1);
+        if(PlayerModePref == -1){
+            //if the preference has never been set, then set it to false
+            PlayerPrefs.SetInt("TwoPlayerModeOn",0);
+        }
+        var TwoPlayerModeOn = PlayerModePref == 1;
+
         toggle = gameObject.GetComponent<Toggle>();
+        toggle.isOn = TwoPlayerModeOn;
         toggle.onValueChanged.AddListener(delegate {
             ToggleValueChanged(toggle);
         });
-        PlayerPrefs.SetInt("TwoPlayerModeOn",(toggle.isOn?1:0));
+
         checkBoxImage = GetComponentInChildren<Image>();
+        checkBoxImage.sprite = toggle.isOn ? OnSprite : OffSprite;
     }
 
     void ToggleValueChanged(Toggle change)
