@@ -8,7 +8,17 @@ public class LevelController : MonoBehaviour
     public List<PlayerController> Players;
     void Start()
     {
-        
+        var TwoPlayerModeOn = PlayerPrefs.GetInt("TwoPlayerModeOn", 0) != 0;
+        if(TwoPlayerModeOn){
+            Players[0].playerNum=1;
+            Players[0].active = true;
+            Players[1].playerNum=1;
+            Players[1].active = false;
+            Players[2].playerNum=2;
+            Players[2].active = true;
+            Players[3].playerNum=2;
+            Players[3].active = false;
+        }
     }
 
     // Update is called once per frame

@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2891568147856285015}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7137752174743878107}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4076206449385790987
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2134709044, guid: 0ae18fc6d603fe2459f677d31caf2010, type: 3}
+  m_Sprite: {fileID: -1572146973, guid: 5c33f17a69adde74e879876862f289db, type: 3}
   m_Color: {r: 0.9529412, g: 0.84313726, b: 0.38431373, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -231,6 +231,8 @@ MonoBehaviour:
   groundCheckBoxSize: {x: 0.75, y: 0.12}
   groundCheckCastDistance: 1.5
   headCheckCastDistance: 0.45
+  Player1Arrow: {fileID: 2115082271, guid: 5c33f17a69adde74e879876862f289db, type: 3}
+  Player2Arrow: {fileID: 1235120835, guid: 5c33f17a69adde74e879876862f289db, type: 3}
   element: 2
   jumpSoundEffect: {fileID: 1181546029}
 --- !u!50 &7137752174743878103

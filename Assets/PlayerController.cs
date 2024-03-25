@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public float groundCheckCastDistance;
     public float headCheckCastDistance;
 
+    public Sprite Player1Arrow;
+    public Sprite Player2Arrow;
+
     //? prevent exterior modification to the element - https://docs.unity3d.com/Manual/script-Serialization.html
     [SerializeField]
     private Elements element = global::Elements.None;
@@ -26,6 +29,10 @@ public class PlayerController : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        var TwoPlayerModeOn = PlayerPrefs.GetInt("TwoPlayerModeOn", 0) != 0;
+        if(TwoPlayerModeOn){
+            arrowSprite.sprite = playerNum == 1 ? Player1Arrow : Player2Arrow;
+        }
        
     }
 
