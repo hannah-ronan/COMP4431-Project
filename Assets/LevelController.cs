@@ -18,6 +18,10 @@ public class LevelController : MonoBehaviour
             Players[2].active = true;
             Players[3].playerNum=2;
             Players[3].active = false;
+            foreach(var player in Players)
+            {
+                player.UpdateArrowSprite();
+            }
         }
     }
 

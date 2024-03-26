@@ -37,7 +37,7 @@ public class GameOver : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1;
+        Time.timeScale = 1; 
         isGameOver = false;
         StartCoroutine(LoadNextScene(SceneManager.GetActiveScene().name));
         gameOverUI.SetActive(false);
@@ -50,6 +50,5 @@ public class GameOver : MonoBehaviour
         crossFade.SetTrigger("Start");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(scene);
-
     }
 }

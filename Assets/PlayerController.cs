@@ -29,11 +29,10 @@ public class PlayerController : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        var TwoPlayerModeOn = PlayerPrefs.GetInt("TwoPlayerModeOn", 0) != 0;
-        if(TwoPlayerModeOn){
-            arrowSprite.sprite = playerNum == 1 ? Player1Arrow : Player2Arrow;
-        }
-       
+    }
+
+    public void UpdateArrowSprite(){
+        arrowSprite.sprite = playerNum == 1 ? Player1Arrow : Player2Arrow;
     }
 
     // Update is called once per frame
