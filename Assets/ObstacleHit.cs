@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleHit : MonoBehaviour
 {
     public static bool isObstacleHit = false;
+    private static bool waitingForGameOver = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,11 +14,15 @@ public class ObstacleHit : MonoBehaviour
             return;
         }
         player.Die();
-        StartCoroutine(DelayGameOver(1f));
+        if(!waitingForGameOver){
+            waitingForGameOver = true;
+            StartCoroutine(DelayGameOver(1f));
+        }
     }
 
     IEnumerator DelayGameOver(float delayTime){
         yield return new WaitForSeconds(delayTime);
         isObstacleHit = true;
+        waitingForGameOver = false;
     }
 }

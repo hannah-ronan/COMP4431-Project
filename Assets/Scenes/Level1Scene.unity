@@ -7666,7 +7666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1134a8be3f72049aaf8822e57eb0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSoundEffect: {fileID: 820314282}
   gameOverSoundEffect: {fileID: 820314284}
   NextSceneUI: {fileID: 1960648723}
 --- !u!82 &820314284
@@ -9791,6 +9790,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3942820720479541778, guid: fa26417b795148d43803563e88b01c5f, type: 3}
   m_PrefabInstance: {fileID: 1960648722}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1960648725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3280862597590190294, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+  m_PrefabInstance: {fileID: 1960648722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1960648726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960648725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae12e174a729b7d46acfd2b7f6491969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  highScoreText: {fileID: 0}
 --- !u!1 &2091328852
 GameObject:
   m_ObjectHideFlags: 0
@@ -10336,7 +10354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1134a8be3f72049aaf8822e57eb0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSoundEffect: {fileID: 2129598204}
   gameOverSoundEffect: {fileID: 2129598205}
   NextSceneUI: {fileID: 1960648723}
 --- !u!114 &1196804054074738899 stripped
@@ -10650,7 +10667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1134a8be3f72049aaf8822e57eb0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSoundEffect: {fileID: 1196804054074738907}
   gameOverSoundEffect: {fileID: 1196804054074738906}
   NextSceneUI: {fileID: 1960648723}
 --- !u!1001 &3426026233622706743
@@ -10890,7 +10906,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1134a8be3f72049aaf8822e57eb0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectSoundEffect: {fileID: 6099567702837658635}
   gameOverSoundEffect: {fileID: 6099567702837658634}
   NextSceneUI: {fileID: 1960648723}
 --- !u!82 &6099567702837658634
