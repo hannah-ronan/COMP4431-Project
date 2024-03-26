@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 using Objects.key;
 using Objects.token;
@@ -29,10 +30,22 @@ namespace UI.Score
         public int Keys { get; set; }
 
         public float Value =>
-            (float)(Math.Round((Tokens * Token.value + ReccommmededSecondsToComplete) / Timer.ElpasedTime.TotalSeconds +
-                               Keys * Key.value) * 52);
+            (float)Math.Round(
+                Tokens * Token.value / Math.Clamp(ReccommmededMinutesToComplete - Timer.ElpasedTime.TotalMinutes, 1,
+                    ReccommmededMinutesToComplete)
+                + Keys * Key.value) * 52;
 
-        public int ReccommmededSecondsToComplete { get; private set; }
+        public double ReccommmededMinutesToCompleteLevel =>
+            int.Parse(Regex.Match(SceneManager.GetActiveScene().name, "\\d+").Value) switch
+            {
+                1 => 1,
+                2 => 2,
+                3 => 2.5,
+                4 => 3,
+                _ => 5
+            } + .5; // half second buffer
+
+        public double ReccommmededMinutesToComplete { get; set; }
 
         private string Level { get; set; }
 
@@ -44,8 +57,7 @@ namespace UI.Score
             Keys = 0;
             Level = SceneManager.GetActiveScene().name;
             Timer = GameObject.Find("Timer").GetComponent<Timer>();
-            ReccommmededSecondsToComplete =
-                FindObjectsOfType<Token>().Length * 2 + FindObjectsOfType<Key>().Length * 5 + 10;
+            ReccommmededMinutesToComplete = ReccommmededMinutesToCompleteLevel + FindObjectsOfType<Key>().Length * .45;
         }
 
         public void Save()

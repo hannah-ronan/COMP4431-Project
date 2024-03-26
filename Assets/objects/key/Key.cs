@@ -42,7 +42,7 @@ namespace Objects.key
         {
             Destroy(GetComponent<BoxCollider2D>());
             if(collectedSound != null)
-                AudioSource.PlayClipAtPoint(collectedSound, transform.position,PlayerPrefs.GetFloat("SFXVolume", 3f));
+                AudioSource.PlayClipAtPoint(collectedSound, transform.position,PlayerPrefs.GetFloat("SFXVolume", 10));
             Score.Keys++;
             Animator.SetTrigger(CollectedTriggerID); //<-- Trigger animation>
         }
@@ -51,10 +51,9 @@ namespace Objects.key
 
         private IEnumerator Deny()
         {
-            var original = Element.GetColour(element);
             SpriteRenderer.color = Color.black;
             yield return new WaitForSeconds(0.5f);
-            SpriteRenderer.color = original;
+            SpriteRenderer.color = Element.GetColour(element);
         }
     }
 }
