@@ -7,7 +7,7 @@ namespace Objects.token
     /// <summary>
     /// Game Token to earn more points
     /// </summary>
-    public class Token : MonoBehaviour
+    public class Token: MonoBehaviour
     {
         /// <summary>
         /// point value of the token
@@ -16,10 +16,8 @@ namespace Objects.token
 
         private static readonly int CollectedTriggerID = Animator.StringToHash("collect");
 
-        [SerializeField]
-        private Elements element = Elements.None;
-        [SerializeField]
-        private AudioClip collectedSound;
+        [SerializeField] private Elements element = Elements.None;
+        [SerializeField] private AudioClip collectedSound;
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
@@ -28,9 +26,8 @@ namespace Objects.token
         private void Collect()
         {
             Destroy(GetComponent<BoxCollider2D>());
+            Audio.Audio.Play(collectedSound, AudioTypes.Sfx, transform.position);
             Score.Tokens++;
-            if(collectedSound != null)
-                Audio.Audio.Play(collectedSound, AudioTypes.Sfx, transform.position);
             Animator.SetTrigger(CollectedTriggerID);
         }
 

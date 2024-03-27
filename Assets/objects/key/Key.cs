@@ -14,14 +14,12 @@ namespace Objects.key
         /// point value of the key
         /// </summary>
         public const int Value = 1;
+
         private static readonly int CollectedTriggerID = Animator.StringToHash("collected");
 
-        [SerializeField]
-        private Elements element = Elements.None;
-        [SerializeField]
-        private AudioClip collectedSound;
-        [SerializeField]
-        private AudioClip deniedSound;
+        [SerializeField] private Elements element = Elements.None;
+        [SerializeField] private AudioClip collectedSound;
+        [SerializeField] private AudioClip deniedSound;
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
@@ -52,8 +50,7 @@ namespace Objects.key
         private void Collect()
         {
             Destroy(GetComponent<BoxCollider2D>());
-            if(collectedSound != null)
-                Audio.Audio.Play(collectedSound, AudioTypes.Sfx);
+            Audio.Audio.Play(collectedSound, AudioTypes.Sfx);
             Score.Keys++;
             Animator.SetTrigger(CollectedTriggerID); //<-- Trigger animation>
         }
