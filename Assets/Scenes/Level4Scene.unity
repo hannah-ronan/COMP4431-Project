@@ -1795,6 +1795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelSceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3942820720912981426, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 466
+      objectReference: {fileID: 0}
     - target: {fileID: 3942820721917699841, guid: fa26417b795148d43803563e88b01c5f, type: 3}
       propertyPath: m_Camera
       value: 
