@@ -1,20 +1,25 @@
 using Audio;
-using UI.Score;
+using UI;
 using UnityEngine;
 
 namespace Objects.token
 {
     /// <summary>
-    /// Game Token
+    /// Game Token to earn more points
     /// </summary>
     public class Token : MonoBehaviour
     {
-        public const int value = 5;
+        /// <summary>
+        /// point value of the token
+        /// </summary>
+        public const int Value = 5;
 
         private static readonly int CollectedTriggerID = Animator.StringToHash("collect");
 
-        public Elements element = Elements.None;
-        public AudioClip collectedSound;
+        [SerializeField]
+        private Elements element = Elements.None;
+        [SerializeField]
+        private AudioClip collectedSound;
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Audio
@@ -34,8 +35,16 @@ namespace Audio
             if(clip == null)
                 return;
 
-            position ??= Camera.current.transform.position;
-            AudioSource.PlayClipAtPoint(clip, position.Value, GetCombinedVolume(type));
+            try
+            {
+                position ??= Camera.current.transform.position;
+                AudioSource.PlayClipAtPoint(clip, position.Value, GetCombinedVolume(type));
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                Debug.LogError(e);
+            }
         }
     }
 }

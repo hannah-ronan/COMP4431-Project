@@ -1,16 +1,23 @@
 using System.Collections;
 using Audio;
-using UI.Score;
+using UI;
 using UnityEngine;
 
 namespace Objects.key
 {
+    /// <summary>
+    /// key collectable to complete the level
+    /// </summary>
     public class Key: MonoBehaviour
     {
-        public const int value = 1;
+        /// <summary>
+        /// point value of the key
+        /// </summary>
+        public const int Value = 1;
         private static readonly int CollectedTriggerID = Animator.StringToHash("collected");
 
-        public Elements element = Elements.None;
+        [SerializeField]
+        private Elements element = Elements.None;
         [SerializeField]
         private AudioClip collectedSound;
         [SerializeField]

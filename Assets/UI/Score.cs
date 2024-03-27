@@ -27,7 +27,7 @@ namespace UI
         /// </summary>
         public int Keys { get;  set; }
 
-        public float Value => (float)(Keys * Key.value - Math.Clamp(Timer.ElpasedTime.TotalMinutes, 0, 4) + Tokens * Token.Value) * 52;
+        public float Value => (float)(Keys * Key.Value - Math.Clamp(Timer.ElpasedTime.TotalMinutes, 0, 4) + Tokens * Token.Value) * 52;
 
         private string Level { get; set; }
 
