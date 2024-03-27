@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Audio;
 using UI.Score;
 using UnityEngine;
 
@@ -26,13 +25,13 @@ namespace Objects.token
             Destroy(GetComponent<BoxCollider2D>());
             Score.Tokens++;
             if(collectedSound != null)
-                AudioSource.PlayClipAtPoint(collectedSound, transform.position, PlayerPrefs.GetFloat("SFXVolume", 3f));
+                Audio.Audio.Play(collectedSound, AudioTypes.Sfx, transform.position);
             Animator.SetTrigger(CollectedTriggerID);
         }
 
         private void Awake()
         {
-            Score = GameObject.FindObjectOfType<Score>();
+            Score = FindObjectOfType<Score>();
             SpriteRenderer = GetComponent<SpriteRenderer>();
             Animator = GetComponent<Animator>();
             SpriteRenderer.color = Element.GetColour(element);

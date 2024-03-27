@@ -1,3 +1,4 @@
+using Audio;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -19,9 +20,12 @@ public class PlayerController : MonoBehaviour
 
     //? prevent exterior modification to the element - https://docs.unity3d.com/Manual/script-Serialization.html
     [SerializeField]
-    private Elements element = global::Elements.None;
+    private Elements element = Elements.None;
     public Elements Element => element;
-    [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField]
+    private AudioClip jumpSoundEffect;
+    [SerializeField]
+    private AudioClip deathSoundEffect;
 
 
     void Start()
@@ -59,7 +63,7 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetButtonDown($"P{playerNum}Vertical") && isGrounded())
                 {
                     anim.SetTrigger("Jump");
-                    jumpSoundEffect.Play();
+                    Audio.Audio.Play(jumpSoundEffect, AudioTypes.Sfx, transform.position);
                     float jumpForce = Mathf.Sqrt(jumpHeight * -2 * (Physics2D.gravity.y * rb.gravityScale));
                     rb.velocity = new Vector2(rb.velocity.x,0);
                     rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -77,6 +81,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die(){
         active = false;
+        Audio.Audio.Play(deathSoundEffect, AudioTypes.Sfx, transform.position);
         anim.Play("die");
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4982923736862673185}
   - component: {fileID: 436181118573985868}
   m_Layer: 0
-  m_Name: Key
+  m_Name: key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,3 +147,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   element: 0
   collectedSound: {fileID: 8300000, guid: 86305b96de8062547be8f72418ea4bd6, type: 3}
+  deniedSound: {fileID: 8300000, guid: b84e5d214f85c0f4bb2b5e15e814e8e2, type: 3}

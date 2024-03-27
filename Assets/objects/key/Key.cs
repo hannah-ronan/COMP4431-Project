@@ -1,4 +1,5 @@
 using System.Collections;
+using Audio;
 using UI.Score;
 using UnityEngine;
 
@@ -10,7 +11,10 @@ namespace Objects.key
         private static readonly int CollectedTriggerID = Animator.StringToHash("collected");
 
         public Elements element = Elements.None;
-        public AudioClip collectedSound;
+        [SerializeField]
+        private AudioClip collectedSound;
+        [SerializeField]
+        private AudioClip deniedSound;
 
         private SpriteRenderer SpriteRenderer { get; set; }
         private Animator Animator { get; set; }
@@ -18,7 +22,7 @@ namespace Objects.key
 
         public void Awake()
         {
-            Score = GameObject.FindObjectOfType<Score>();
+            Score = FindObjectOfType<Score>();
             SpriteRenderer = GetComponent<SpriteRenderer>();
             Animator = GetComponent<Animator>();
             if(element != Elements.None)
@@ -42,7 +46,7 @@ namespace Objects.key
         {
             Destroy(GetComponent<BoxCollider2D>());
             if(collectedSound != null)
-                AudioSource.PlayClipAtPoint(collectedSound, transform.position,PlayerPrefs.GetFloat("SFXVolume", 10));
+                Audio.Audio.Play(collectedSound, AudioTypes.Sfx);
             Score.Keys++;
             Animator.SetTrigger(CollectedTriggerID); //<-- Trigger animation>
         }
@@ -51,6 +55,7 @@ namespace Objects.key
 
         private IEnumerator Deny()
         {
+            Audio.Audio.Play(deniedSound, AudioTypes.Sfx, transform.position);
             SpriteRenderer.color = Color.black;
             yield return new WaitForSeconds(0.5f);
             SpriteRenderer.color = Element.GetColour(element);

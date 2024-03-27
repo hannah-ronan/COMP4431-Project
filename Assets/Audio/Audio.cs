@@ -29,7 +29,7 @@ namespace Audio
         /// </summary>
         public static float MasterVolume => PlayerPrefs.GetFloat("master_volume", DefaultVolume);
 
-        public static void Play(UnityEngine.AudioClip clip, AudioTypes type, Vector3? position = null)
+        public static void Play(AudioClip clip, AudioTypes type, Vector3? position = null)
         {
             if(clip == null)
                 return;
