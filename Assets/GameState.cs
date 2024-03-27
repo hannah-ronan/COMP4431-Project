@@ -1,10 +1,13 @@
 using System.Collections;
 using Objects.key;
-using UI.Score;
+using UI;
 using UI.timer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Game state of the current level; checks if the level is complete
+/// </summary>
 public class GameState: MonoBehaviour
 {
     [SerializeField] private AudioSource gameOverSoundEffect;

@@ -1,6 +1,4 @@
 using System;
-using System.IO;
-using System.Text.RegularExpressions;
 using Objects.key;
 using Objects.token;
 using TMPro;
@@ -8,8 +6,11 @@ using UI.timer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace UI.Score
+namespace UI
 {
+    /// <summary>
+    /// Score of the game's current level
+    /// </summary>
     public class Score: MonoBehaviour
     {
         private Timer Timer { get; set; }
@@ -19,56 +20,49 @@ namespace UI.Score
         /// <summary>
         /// the number of collected tokens
         /// </summary>
-        public int Tokens { get; set; }
+        public int Tokens { get;  set; }
 
         /// <summary>
         /// the number of collected keys
         /// </summary>
-        public int Keys { get; set; }
+        public int Keys { get;  set; }
 
-        public float Value =>
-            (float)Math.Round(
-                Tokens * Token.value / Math.Clamp(ReccommmededMinutesToComplete - Timer.ElpasedTime.TotalMinutes, 1,
-                    ReccommmededMinutesToComplete)
-                + Keys * Key.value) * 52;
-
-        public double ReccommmededMinutesToCompleteLevel =>
-            int.Parse(Regex.Match(SceneManager.GetActiveScene().name, "\\d+").Value) switch
-            {
-                1 => 1,
-                2 => 2,
-                3 => 2.5,
-                4 => 3,
-                _ => 5
-            } + .5; // half second buffer
-
-        public double ReccommmededMinutesToComplete { get; set; }
+        public float Value => (float)(Keys * Key.value - Math.Clamp(Timer.ElpasedTime.TotalMinutes, 0, 4) + Tokens * Token.Value) * 52;
 
         private string Level { get; set; }
 
         // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             enabled = false;
             Tokens = 0;
             Keys = 0;
             Level = SceneManager.GetActiveScene().name;
             Timer = GameObject.Find("Timer").GetComponent<Timer>();
-            ReccommmededMinutesToComplete = ReccommmededMinutesToCompleteLevel + FindObjectsOfType<Key>().Length * .45;
         }
 
+        /// <summary>
+        /// Save the score to the player prefs
+        /// <remarks>This is not the base method to store the score but 🤷🏿‍♂️ it works</remarks>
+        /// </summary>
         public void Save()
         {
-            var path = Path.Combine(Application.persistentDataPath, "scores.db");
-            Debug.Log(path, this);
-            if(Value > PlayerPrefs.GetFloat(Level, 0))
+            if(Value > PlayerPrefs.GetFloat(Level, -1))
                 PlayerPrefs.SetFloat(Level, Value);
         }
 
+        /// <summary>
+        /// the high score of the current level
+        /// </summary>
+        public float HighScore => PlayerPrefs.GetFloat(Level, -1);
+
+        /// <summary>
+        /// Display the score on the screen
+        /// </summary>
         public void Display()
         {
             Save();
-            highScoreText.text = $"High Score: {PlayerPrefs.GetFloat(Level, 0)}";
+            highScoreText.text = $"High Score: {HighScore}";
             scoreText.text = $"Score: {Value}";
         }
     }
