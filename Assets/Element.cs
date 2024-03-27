@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
 using System.ComponentModel;
 using UnityEngine;
-using System.Collections.Generic;
-using Objects.key;
-using Random = UnityEngine.Random;
 
 public static class Element
 {
@@ -30,29 +25,6 @@ public static class Element
             Elements.None => Color.clear,
             _ => throw new InvalidEnumArgumentException("Invalid Element"),
         };
-    }
-
-    public static Coroutine setColour(Key key)
-    {
-        return key.StartCoroutine(Rainbow());
-
-        IEnumerator Rainbow()
-        {
-            var sprite = key.GetComponent<SpriteRenderer>();
-
-
-            while(true)
-            {
-                while(key.element == Elements.None)
-                {
-                    Elements element = (Elements)Random.Range(1, 5);
-                    sprite.color = GetColour(element);
-                    yield return new WaitForSecondsRealtime(0.5f);
-                }
-
-                yield return new WaitUntil(() => key.element != Elements.None);
-            }
-        }
     }
 }
 

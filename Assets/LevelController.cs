@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
@@ -31,10 +31,10 @@ public class LevelController : MonoBehaviour
         if (Input.GetButtonDown("P1SwitchCharacter"))
         {
             var characters = Players.Where(player=>player.playerNum==1).ToList();
-            for (int i = 0;i<characters.Count();i++){
+            for (int i = 0;i<characters.Count;i++){
                 if(characters[i].active){
                     characters[i].active = false;
-                    var activateIndex = i == characters.Count()-1 ? 0 : i + 1;
+                    var activateIndex = i == characters.Count-1 ? 0 : i + 1;
                     characters[activateIndex].active=true;
                     break;
                 }
@@ -43,10 +43,10 @@ public class LevelController : MonoBehaviour
         if (Input.GetButtonDown("P2SwitchCharacter"))
         {
             var characters = Players.Where(player=>player.playerNum==2).ToList();
-            for (int i = 0;i<characters.Count();i++){
+            for (int i = 0;i<characters.Count;i++){
                 if(characters[i].active){
                     characters[i].active = false;
-                    var activateIndex = i == characters.Count()-1 ? 0 : i + 1;
+                    var activateIndex = i == characters.Count-1 ? 0 : i + 1;
                     characters[activateIndex].active=true;
                     break;
                 }

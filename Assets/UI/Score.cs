@@ -1,21 +1,18 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Xml.Serialization;
 using Objects.key;
 using Objects.token;
 using TMPro;
 using UI.timer;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
 namespace UI.Score
 {
     public class Score: MonoBehaviour
     {
-        private timer.Timer Timer { get; set; }
+        private Timer Timer { get; set; }
         [SerializeField] private TextMeshProUGUI scoreText;
         [SerializeField] private TextMeshProUGUI highScoreText;
 
@@ -62,7 +59,7 @@ namespace UI.Score
 
         public void Save()
         {
-            var path = System.IO.Path.Combine(Application.persistentDataPath, "scores.db");
+            var path = Path.Combine(Application.persistentDataPath, "scores.db");
             Debug.Log(path, this);
             if(Value > PlayerPrefs.GetFloat(Level, 0))
                 PlayerPrefs.SetFloat(Level, Value);

@@ -1,11 +1,7 @@
-using System;
 using System.Collections;
-using System.Linq;
 using Objects.key;
-using Objects.token;
 using UI.Score;
 using UI.timer;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
