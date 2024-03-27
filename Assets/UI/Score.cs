@@ -62,8 +62,8 @@ namespace UI
         public void Display()
         {
             Save();
-            highScoreText.text = $"High Score: {HighScore}";
-            scoreText.text = $"Score: {Value}";
+            highScoreText.text = $"High Score: {(int)HighScore}";
+            scoreText.text = $"Score: {(int)Value}";
         }
     }
 }
