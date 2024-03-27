@@ -10590,10 +10590,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
-    - target: {fileID: 7137752174743878102, guid: d41367dccf571df40a46aa1c060dd376, type: 3}
-      propertyPath: jumpSoundEffect
-      value: 
-      objectReference: {fileID: 6099567702837658632}
     - target: {fileID: 7137752174743878107, guid: d41367dccf571df40a46aa1c060dd376, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -10964,10 +10960,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dog
       objectReference: {fileID: 0}
-    - target: {fileID: 8618762516996172416, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
-      propertyPath: jumpSoundEffect
-      value: 
-      objectReference: {fileID: 2129598203}
     - target: {fileID: 8618762516996172429, guid: 027d572231ce78c4c9d8ecd139a67d05, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -11025,10 +11017,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Turtle
       objectReference: {fileID: 0}
-    - target: {fileID: 7785450221740521683, guid: 4093cdcd26807434dacff176c9ee71a6, type: 3}
-      propertyPath: jumpSoundEffect
-      value: 
-      objectReference: {fileID: 1196804054074738905}
     - target: {fileID: 7785450221740521694, guid: 4093cdcd26807434dacff176c9ee71a6, type: 3}
       propertyPath: m_RootOrder
       value: 16

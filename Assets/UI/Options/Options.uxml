@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-direction: column; align-items: center; justify-content: flex-start; width: 100%; height: auto; padding-left: 20%; padding-right: 20%; padding-top: 25px; padding-bottom: 25px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-width: 195px; min-height: auto; flex-grow: 0; flex-shrink: 0; max-width: none; flex-wrap: wrap;">
+        <ui:Label text="Options" display-tooltip-when-elided="true" enable-rich-text="true" style="-unity-font-style: bold; font-size: 36px; width: 100%; justify-content: center; align-items: auto; -unity-text-align: upper-center; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/PixelatedPusab.ttf?fileID=12800000&amp;guid=10ed053f8033e394896824e625b5c243&amp;type=3#PixelatedPusab&apos;); -unity-text-outline-width: 0;" />
+        <ui:GroupBox style="width: 100%; margin-top: 25px; height: auto; margin-bottom: 5%; min-height: 15%; max-height: none;">
+            <ui:Label text="Volume Settings" display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 18px; -unity-font-style: bold;" />
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:SliderInt picking-mode="Ignore" label="Master" value="100" high-value="100" name="master_volume" show-input-field="false" inverted="false" style="flex-grow: 1;" />
+                <ui:Label text="xxx%" display-tooltip-when-elided="true" name="lbl_master_volume" style="-unity-font-style: bold; -unity-text-align: upper-right; width: 10%; justify-content: center; align-items: auto; font-size: 18px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:SliderInt picking-mode="Ignore" label="Background Music" value="100" high-value="100" name="bgMusic_volume" style="flex-grow: 1;" />
+                <ui:Label text="XXX%" display-tooltip-when-elided="true" name="lbl_bgMusic_volume" style="justify-content: center; align-items: auto; width: 10%; -unity-font-style: bold; font-size: 18px; -unity-text-align: upper-right;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row;">
+                <ui:SliderInt picking-mode="Ignore" label="Sound Effects" value="100" high-value="100" name="sfx_volume" style="flex-grow: 1;" />
+                <ui:Label text="xxx%" display-tooltip-when-elided="true" name="lbl_sfx_volume" style="align-items: auto; justify-content: center; width: 10%; -unity-font-style: bold; font-size: 18px; -unity-text-align: upper-right;" />
+            </ui:VisualElement>
+        </ui:GroupBox>
+        <ui:Button text="Clear HighScores" display-tooltip-when-elided="true" enable-rich-text="false" style="background-image: url(&apos;project://database/Assets/CustomAssets/buttons%20free.png?fileID=1189248474&amp;guid=7866167f178c2bb40b341d32e1d3c145&amp;type=3#buttons free_0&apos;); -unity-background-image-tint-color: rgb(248, 78, 78); -unity-background-scale-mode: stretch-to-fill; background-color: rgba(255, 255, 255, 0); border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; -unity-slice-left: 0; white-space: normal; -unity-font-style: normal; -unity-text-align: middle-center;" />
+    </ui:VisualElement>
+</ui:UXML>
