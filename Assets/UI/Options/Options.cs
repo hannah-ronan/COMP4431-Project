@@ -50,7 +50,7 @@ namespace UI.Options
         private static void OnChangeHandler(ChangeEvent<int> @event, Label label)
         {
             var value = @event.newValue / 100f;
-            label.text = $"{value}%%";
+            label.text = $"{value}%"; 
             //? remove the "lbl_" prefix and convert to lowercase
             var optionName = label.name.Remove(0, 4).ToLower();
             PlayerPrefs.SetFloat(optionName, value);
