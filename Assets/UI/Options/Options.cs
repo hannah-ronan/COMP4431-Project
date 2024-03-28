@@ -42,9 +42,9 @@ namespace UI.Options
             MusicVolumeSlider.value = (int)(musicVolume * 100);
             SfxVolumeSlider.value = (int)(sfxVolume * 100);
 
-            LblMasterVolume.text = $"{masterVolume}%";
-            LblMusicVolume.text = $"{musicVolume}%";
-            LblSfxVolume.text = $"{sfxVolume}%";
+            LblMasterVolume.text = $"{masterVolume*100}%";
+            LblMusicVolume.text = $"{musicVolume*100}%";
+            LblSfxVolume.text = $"{sfxVolume*100}%";
         }
 
         private static void OnChangeHandler(ChangeEvent<int> @event, Label label)
