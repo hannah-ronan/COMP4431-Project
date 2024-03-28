@@ -9163,10 +9163,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3942820720271322785, guid: fa26417b795148d43803563e88b01c5f, type: 3}
-      propertyPath: nextLevelButton
+    - target: {fileID: 3942820719852707631, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 5213849167350655459}
+      objectReference: {fileID: 101064428}
+    - target: {fileID: 3942820720271322786, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 101064428}
     - target: {fileID: 3942820720449315038, guid: fa26417b795148d43803563e88b01c5f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9215,16 +9219,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelSceneManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3942820721917699841, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 101064428}
+    - target: {fileID: 4320980127598804192, guid: fa26417b795148d43803563e88b01c5f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 101064428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa26417b795148d43803563e88b01c5f, type: 3}
 --- !u!1 &5213849167350655458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3942820720271322791, guid: fa26417b795148d43803563e88b01c5f, type: 3}
-  m_PrefabInstance: {fileID: 5213849167350655457}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5213849167350655459 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3942820720479541778, guid: fa26417b795148d43803563e88b01c5f, type: 3}
   m_PrefabInstance: {fileID: 5213849167350655457}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7801824770157862394

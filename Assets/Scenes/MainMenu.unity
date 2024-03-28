@@ -1107,7 +1107,8 @@ MonoBehaviour:
     levels there are coins which can be collected for bonus points. The level is
     completed once all keys are collected.\n\nCharacters - Each character is an animal
     with an element as a theme.\n\n\tEarth - Bird\n\tWater - Dog\n\tFire - Frog\n\tAir
-    - Turtle\n\nControls:\n\nMovement: Arrow Keys\nSwitch Character: Right Shift"
+    - Turtle\n\nControls:\n\nPlayer 1:\t\t\t\tPlayer 2:\nMovement: Arrow Keys\t\t\tWASD\nSwitch
+    Character: Right Shift\t\tLeft Shift"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9f4738fc270bb2d4ca17b4987b8a67c3, type: 2}
   m_sharedMaterial: {fileID: 6023939578606099831, guid: 9f4738fc270bb2d4ca17b4987b8a67c3, type: 2}
