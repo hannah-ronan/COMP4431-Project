@@ -9,8 +9,12 @@ Animentals is a local multiplayer platformer browser puzzle game with elementall
 In the game the player will have to collect keys to progress.
 The players will have to cooperate and complete puzzles and tasks to complete the level.
 
+## Installion and Development
+
 ### System Requirements
+
 All you need to play our game is a web browser and internet connection - the game can be found here https://hannahronan.itch.io/animentals
+
 
 ### Controls
 
@@ -18,6 +22,11 @@ All you need to play our game is a web browser and internet connection - the gam
 - Toggle character: right shift
 
 ## Development
+
+To contribute, build, or play the game locally will require [Unity Editor 2021 (2021.3.9f1 LTS)](https://unity.com/releases/editor/whats-new/2021.3.9), and an IDE is recommended such as [Jetbrains Rider](https://www.jetbrains.com/rider/) or [Visual Studio](https://visualstudio.microsoft.com).
+Clone this repository locally `git clone https://github.com/hannah-ronan/COMP4431-Project` or download the zip archive from github.
+Then open the project from within the Unity Editor to play test or build an executable for your platform.
+
 
 ### Documents
 
