@@ -19,7 +19,9 @@ All you need to play our game is a web browser and internet connection - the gam
 ### Controls
 
 - Player 1 movement: arrow keys
-- Toggle character: right shift
+- Player 1 Toggle character: right shift
+- Player 2 movement: WASD keys
+- Player 2 Toggle character: left shift
 
 ## Development
 
