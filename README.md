@@ -30,11 +30,6 @@ Clone this repository locally `git clone https://github.com/hannah-ronan/COMP443
 Then open the project from within the Unity Editor to play test or build an executable for your platform.
 
 
-### Documents
-
-- [final report google doc](https://docs.google.com/document/d/18fczOi32C0eiQCZjbw5nLrBtizW49w1Py0UXJUW6lBw/edit?usp=sharing)
-- [group meeting notes](https://docs.google.com/document/d/18fczOi32C0eiQCZjbw5nLrBtizW49w1Py0UXJUW6lBw/edit?usp=sharing)
-
 ## Credits
 
 Sound Effects from
